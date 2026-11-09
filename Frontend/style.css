@@ -1,0 +1,640 @@
+
+/* =====================================================
+   MY OWN WEATHER APP
+   COLORFUL PREMIUM UI - COMPLETE STYLESHEET
+   Theme: Pink | Sky Blue | Yellow | Red | Orange
+          White | Black | Navy | Green | Purple
+===================================================== */
+
+/* ================= ROOT COLORS ================= */
+
+:root {
+    --pink: #ec4899;
+    --light-pink: #f9a8d4;
+    --sky-blue: #38bdf8;
+    --light-blue: #7dd3fc;
+    --blue: #2563eb;
+    --navy: #172554;
+    --dark-navy: #0b1120;
+    --yellow: #facc15;
+    --orange: #f97316;
+    --red: #ef4444;
+    --green: #22c55e;
+    --purple: #a78bfa;
+    --white: #f8fafc;
+    --black: #09090b;
+    --gray: #94a3b8;
+
+    --card-bg: rgba(23, 37, 84, 0.72);
+    --border: rgba(125, 211, 252, 0.2);
+    --shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= GLOBAL APP ================= */
+
+.stApp {
+    background:
+        radial-gradient(
+            circle at 5% 5%,
+            rgba(236, 72, 153, 0.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(56, 189, 248, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(34, 197, 94, 0.09),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #09090b 0%,
+            #101a35 50%,
+            #172554 100%
+        );
+
+    color: var(--white);
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.main .block-container {
+    max-width: 1450px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* ================= HEADINGS ================= */
+
+h1 {
+    background: linear-gradient(
+        90deg,
+        #ec4899,
+        #38bdf8,
+        #facc15,
+        #f97316
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 2.6rem !important;
+    font-weight: 850 !important;
+    letter-spacing: -1px;
+}
+
+h2 {
+    color: #f8fafc !important;
+    font-weight: 800 !important;
+}
+
+h3 {
+    color: #7dd3fc !important;
+    font-weight: 750 !important;
+}
+
+h4, h5, h6 {
+    color: #f9a8d4 !important;
+}
+
+/* ================= TEXT ================= */
+
+p {
+    color: #dbeafe;
+    line-height: 1.7;
+}
+
+label {
+    color: #e2e8f0 !important;
+}
+
+small {
+    color: #94a3b8;
+}
+
+/* ================= SIDEBAR ================= */
+
+section[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #09090b 0%,
+        #111827 45%,
+        #172554 100%
+    );
+
+    border-right: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #f8fafc !important;
+}
+
+section[data-testid="stSidebar"] p {
+    color: #cbd5e1;
+}
+
+/* Sidebar divider */
+section[data-testid="stSidebar"] hr {
+    border-color: rgba(236, 72, 153, 0.35);
+}
+
+/* ================= WEATHER CARDS ================= */
+
+.weather-card,
+.metric-card,
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: linear-gradient(
+        145deg,
+        rgba(23, 37, 84, 0.92),
+        rgba(17, 24, 39, 0.95)
+    );
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    padding: 18px;
+
+    box-shadow: var(--shadow);
+
+    transition: all 0.3s ease;
+}
+
+/* Card hover */
+.weather-card:hover,
+.metric-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--pink);
+
+    box-shadow:
+        0 12px 35px rgba(243, 5, 203, 0.16),
+        0 5px 20px rgba(56, 189, 248, 0.12);
+}
+
+/* ================= STREAMLIT METRICS ================= */
+
+[data-testid="stMetric"] {
+    background: linear-gradient(
+        135deg,
+        rgb(255, 51, 0),
+        rgb(135, 212, 235)
+    );
+
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 17px;
+
+    padding: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+[data-testid="stMetricValue"] {
+    color: #f9a8d4 !important;
+    font-size: 1.8rem !important;
+    font-weight: 850 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #fde047 !important;
+    font-weight: 650;
+}
+
+[data-testid="stMetricDelta"] {
+    color: green !important;
+}
+
+/* ================= BUTTONS ================= */
+
+.stButton > button {
+    background: linear-gradient(
+        100deg,
+        #ec4899,
+        #8b5cf6,
+        #2563eb
+    );
+
+    color: #ffffff !important;
+
+    border: none;
+    border-radius: 13px;
+
+    padding: 0.65rem 1.2rem;
+
+    font-weight: 750;
+    letter-spacing: 0.3px;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 18px rgba(236, 72, 153, 0.2);
+}
+
+.stButton > button:hover {
+    background: linear-gradient(
+        100deg,
+        #f97316,
+        #ef4444,
+        #ec4899
+    );
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.35);
+}
+
+.stButton > button:active {
+    transform: scale(0.97);
+}
+
+/* Full width buttons */
+.stButton > button[kind="primary"] {
+    background: linear-gradient(
+        100deg,
+        #0284c7,
+        #7c3aed
+    );
+}
+
+/* ================= TEXT INPUT ================= */
+
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stTimeInput input {
+    background: #172554 !important;
+
+    color: #ffffff !important;
+
+    border: 1px solid rgba(56, 189, 248, 0.55) !important;
+
+    border-radius: 12px !important;
+
+    padding: 10px 14px;
+}
+
+.stTextInput input:focus,
+.stNumberInput input:focus {
+    border-color: var(--pink) !important;
+
+    box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.2) !important;
+}
+
+/* Placeholder */
+.stTextInput input::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* ================= SELECT BOX ================= */
+
+.stSelectbox div[data-baseweb="select"],
+.stMultiSelect div[data-baseweb="select"] {
+    background: #172554 !important;
+
+    color: var(--pink) !important;
+
+    border-radius: 12px !important;
+}
+
+/* ================= TABS ================= */
+
+button[data-baseweb="tab"] {
+    color: orangered !important;
+
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+button[data-baseweb="tab"]:hover {
+    color: var(--yellow) !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: var(--pink) !important;
+
+    border-bottom-color: var(--pink) !important;
+}
+
+/* ================= CHAT MESSAGES ================= */
+
+[data-testid="stChatMessage"] {
+    background: linear-gradient(
+        120deg,
+        rgba(23, 37, 84, 0.95),
+        rgba(30, 41, 59, 0.95)
+    );
+
+    border: 1px solid rgba(167, 139, 250, 0.3);
+
+    border-radius: 17px;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+}
+
+/* Chat input */
+[data-testid="stChatInput"] {
+    background: #172554 !important;
+
+    border: 1px solid rgba(56, 189, 248, 0.45);
+
+    border-radius: 15px;
+}
+
+/* ================= EXPANDERS ================= */
+
+details {
+    background: rgba(23, 37, 84, 0.75);
+
+    border: 1px solid rgba(249, 115, 22, 0.3);
+
+    border-radius: 15px;
+
+    padding: 7px 12px;
+
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    border-color: var(--yellow);
+}
+
+details summary {
+    color: var(--sky-blue) !important;
+    font-weight: 700;
+}
+
+/* ================= ALERTS ================= */
+
+[data-testid="stAlert"] {
+    border-radius: 15px;
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+/* ================= DATAFRAMES ================= */
+
+[data-testid="stDataFrame"] {
+    border: 1px solid rgba(56, 189, 248, 0.35);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+/* ================= PROGRESS BAR ================= */
+
+.stProgress > div > div > div > div {
+    background: linear-gradient(
+        90deg,
+        #ec4899,
+        #38bdf8,
+        #22c55e,
+        #facc15
+    );
+}
+
+/* ================= SLIDER ================= */
+
+.stSlider [data-baseweb="slider"] div[role="slider"] {
+    background: var(--pink);
+    border-color: var(--pink);
+}
+
+/* ================= CHECKBOX ================= */
+
+.stCheckbox label {
+    color: rgb(0, 140, 255) !important;
+}
+
+/* ================= RADIO BUTTONS ================= */
+
+.stRadio label {
+    color: #dbeafe !important;
+}
+
+/* ================= FILE UPLOADER ================= */
+
+[data-testid="stFileUploader"] {
+    background: rgba(23, 37, 84, 0.7);
+
+    border: 1px dashed var(--sky-blue);
+
+    border-radius: 16px;
+
+    padding: 15px;
+}
+
+/* ================= CHARTS ================= */
+
+[data-testid="stVegaLiteChart"],
+[data-testid="stPlotlyChart"] {
+    background: rgba(23, 84, 33, 0.65);
+
+    border: 1px solid rgba(171, 56, 248, 0.2);
+
+    border-radius: 17px;
+
+    padding: 10px;
+}
+
+/* ================= NOTIFICATIONS ================= */
+
+[data-testid="stToast"] {
+    background: #174b54;
+    border: 1px solid var(--sky-blue);
+    border-radius: 12px;
+}
+
+/* ================= DIVIDERS ================= */
+
+hr {
+    border: none;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ec4899,
+        #38bdf8,
+        #facc15,
+        transparent
+    );
+
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+/* ================= LINKS ================= */
+
+a {
+    color: var(--sky-blue) !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--pink) !important;
+}
+
+/* ================= WEATHER CONDITION COLORS ================= */
+
+.sunny {
+    color: yellow;
+}
+
+.rainy {
+    color: sky blue;
+}
+
+.cloudy {
+    color: gray;
+}
+
+.stormy {
+    color: red;
+}
+
+.hot {
+    color: orangered;
+}
+
+.good-weather {
+    color: green;
+}
+
+/* ================= FOOTER ================= */
+
+.weather-footer {
+    text-align: center;
+
+    color: #94a3b8;
+
+    padding: 25px 10px;
+
+    border-top: 1px solid rgba(236, 72, 153, 0.35);
+
+    margin-top: 35px;
+
+    font-size: 0.9rem;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #ec4899,
+        #8b5cf6,
+        #38bdf8
+    );
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        #f97316,
+        #facc15
+    );
+}
+
+/* ================= SELECTION ================= */
+
+::selection {
+    background: #ec4899;
+    color: white;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 768px) {
+
+    .main .block-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    h2 {
+        font-size: 1.4rem !important;
+    }
+
+    [data-testid="stMetricValue"] {
+        font-size: 1.35rem !important;
+    }
+
+    .weather-card,
+    .metric-card {
+        padding: 12px;
+        border-radius: 15px;
+    }
+
+    .stButton > button {
+        width: 100%;
+    }
+}
+
+/* ================= MCP TOOLS ================= */
+
+.st-key-mcp-tools-panel {
+    border-color: rgba(56, 189, 248, 0.34) !important;
+    background:
+        radial-gradient(
+            circle at 100% 0,
+            rgba(56, 189, 248, 0.08),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(15, 23, 42, 0.94),
+            rgba(23, 37, 84, 0.82)
+        ) !important;
+}
+
+.st-key-mcp-tools-panel h3 {
+    color: #e0f2fe !important;
+    letter-spacing: -0.02em;
+}
+
+.st-key-mcp-tools-panel [data-testid="stForm"] {
+    border: 1px solid rgba(125, 211, 252, 0.18);
+    border-radius: 14px;
+    padding: 1rem;
+    background: rgba(2, 6, 23, 0.24);
+}
+
+.st-key-mcp-tools-panel [data-testid="stJson"] {
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.36);
+}
+
+.st-key-mcp-tools-panel button[kind="primary"] {
+    background: linear-gradient(105deg, #0284c7, #2563eb) !important;
+    box-shadow: 0 5px 16px rgba(37, 99, 235, 0.24);
+}
+
+.st-key-mcp-tools-panel button[kind="primary"]:hover {
+    background: linear-gradient(105deg, #0ea5e9, #4f46e5) !important;
+}
+
+/* ================= END ================= */
